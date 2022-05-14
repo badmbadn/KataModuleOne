@@ -58,7 +58,10 @@ h6 {
     font-size: inherit;
     font-weight: inherit;
 }
-
+:root {
+    --color-dark:rgba(27, 28, 33, 1);
+    --color-active:rgba(126, 126, 130, 1);
+} 
 @font-face {
     font-family:"TT Lakes" ;
     src: url("fonts/TTLakes-Regular.woff2"),
@@ -96,7 +99,7 @@ body{
     height: 100vh;
     padding-left: 25px;
     background-color: #fff;
-    box-shadow: 4px 4px 7px 0px rgba(16,0,52,0.2);
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 
 }
 .header{
@@ -159,8 +162,8 @@ body{
     color:#de2d62;
 }
 .menu__link--active {
-    pointer-events: none;
     position: relative;
+    color: var(--color-active);
 }
 .menu__link--active::before {
     content: '';
@@ -197,12 +200,12 @@ body{
     display: block;
     margin-bottom: 12px;
     font-weight: 500;
-    color: #1b1c21;
+    color: var(--color-dark);
     height: 24px;
 }
 .contacts__phone {
     display: block;
-    color: #1b1c21;
+    color:var(--color-dark);
     font-weight: 700;
     font-size: 24px;
 }
@@ -212,7 +215,7 @@ body{
 .languages__toggle {
     border: none;
     background: none;
-    color: #1b1c21;
+    color: var(--color-dark);
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -220,7 +223,7 @@ body{
     padding-right: 8px;
 }
 .languages__toggle--active {
-    color: #7e7e82;
+    color: var(--color-active);
 
 }
 @media screen and (max-width:375px) {
