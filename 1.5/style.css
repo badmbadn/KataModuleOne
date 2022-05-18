@@ -244,8 +244,13 @@ body {
         max-width: 240px;
     }
     .brand-slider__wrapper {
+        min-height: 150px;
         padding: 24px 0px;
-        padding-left: 37px;
+        padding-left: 40px;
+        gap: 25px;
+    }
+    .brand-slider__slide {
+        margin: 0;
     }
     .read-more {
         margin-left: 60px;
