@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+html {
+    overflow: hidden;
+}
+html,
+body {
+    height:100%;
+    width:100%;
+    font-size: 100%;
+    line-height: 1;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+button {
+    cursor: pointer;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+@font-face {
+    font-family:"TT Lakes" ;
+    src: url("fonts/TTLakes-Regular.woff2"),
+    url("fonts/TTLakes-Regular.woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family:"TT Lakes" ;
+    src: url("fonts/TTLakes-Medium.woff2"),
+    url("fonts/TTLakes-Medium.woff");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family:"TT Lakes" ;
+    src: url("fonts/TTLakes-Bold.woff2"),
+    url("fonts/TTLakes-Bold.woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+body {
+    font-family: "TT Lakes";
+    font-weight: 400;
+    background-color: #f2f2f2;
+    max-width: 1120px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.header {
+    min-width: 320px;
+    max-height: 80px;
+    background-color: #fff;
+    background-image: linear-gradient(90deg, #f8f8f8, #fff);
+}
+.header::before {
+    content: '';
+    position: absolute;
+    min-width: 320px;
+    height: 1px;
+    color: #d9fff5;
+}
+.header__title {
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color:#7e7e82;
+    padding: 16px 32px;
+}
+.main {
+    background-color: #f2f2f2;
+}
+.brand-slider__btn {
+    background-image:url(img/go.svg) ;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    margin-right: 16px;
+}
+.brand-slider__wrapper {
+    padding: 24px 12px;
+    display: flex;
+    margin-bottom: 16px;
+    
+}
+.brand-slider__slide {
+   margin: 0 0 16px 16px;
+    min-width: 235px;
+    max-width: 250px;
+}
+.swiper-slide__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+}
+.swiper-slide__img {
+    padding: 0 16px;
+}
+.brand-slider .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+}
+.brand-button__image {
+    transform: translate(-30px,-5px);
+}
+
+@media screen and (max-width:767px) {
+    .brand-slider__slide {
+        margin: 0 0 16px 16px;
+    }
+    .brand-button {
+        display: none;
+    }
+    .header__title {
+        padding: 16px;
+    }
+    .brand-slider__slide {
+        margin:8px 8px 16px 4px;
+    }
+    .brand-slider__wrapper {
+        padding-top: 12px;
+    }
+    .expand {
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px)  {
+    .brand-slider__wrapper {
+        max-height: 136px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+      
+        width: 100%;
+    }
+    /*.brand-slider__slide {
+       max-width: 30%;
+        
+    }*/
+    .expand {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    .expand:checked ~ .swiper-wrapper {
+        max-height: none;
+    }
+    .read-more {
+        display: inline-block;
+        position: relative;
+        margin-top: 24px;
+    }
+    .read-more::after {
+        content: "Показать все";
+        padding-left: 26px;
+        background: url(img/expandUp.svg) no-repeat 0 5px;
+    }
+    .expand:checked ~ .read-more::after {
+        content: 'Скрыть';
+        background:url(img/expandDown.svg) no-repeat 0 5px;
+    }
+    .header__title {
+        padding: 16px 50px;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1119px) {
+    .header__title {
+        padding: 16px 24px;
+    }
+    .swiper-container {
+        padding:0 24px ;
+    }
+    .brand-slider__wrapper {
+        padding: 24px 0px;
+        gap: 16px;
+    }
+    .brand-slider__slide {
+        min-width:31% ;
+        max-width: 31%;
+        margin: 0 auto;
+    }
+    .read-more {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (min-width:1120px) {
+    .brand-slider__slide {
+        max-width: 240px;
+    }
+    .brand-slider__wrapper {
+        padding: 24px 0px;
+        padding-left: 37px;
+    }
+    .read-more {
+        margin-left: 60px;
+    }
+}
