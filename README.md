@@ -1,4 +1,4 @@
-1.5 - https://badmbadn.hithub.io
+1.5 - https://badmbadn.github.io
 
 
 
