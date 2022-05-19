@@ -10,6 +10,7 @@ function mobileSlider() {
         breakpoints: {
             320: {
                 slidesPerView:'auto',
+                speed:600,
                 
             },
             768: {
