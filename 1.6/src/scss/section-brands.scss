@@ -1,0 +1,194 @@
+.brand {
+    background-color: $grey;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;   
+    &__title {
+        min-width: 320px;
+        height: auto;
+        background-color: $white;
+        background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
+        border-top: 1px solid $slider-devider;
+        @media screen and (max-width:767px) {
+            padding: 16px 16px;
+        } 
+        @media screen and (min-width:768px) and (max-width:1119px) {
+            padding: 16px 24px;
+        } 
+    }
+}
+.repair-title {
+    font-family: "TT Lakes";
+    font-size: 16px;
+    padding: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $text;
+  
+    @media (min-width: 768px) {
+      padding: 16px 24px;
+    }
+    @media (min-width: 1120px) {
+      padding: 16px 32px;
+    }   
+}
+.brand-slider {
+    padding: 0 16px;
+    @media screen and(min-width:768px) {
+        padding: 0;
+    }
+    &__wrapper {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        display: flex;
+        gap: 10px 23px;
+        @media (max-width: 767px){
+            padding-top: 12px;
+        }
+        @media (min-width: 767px) {
+            max-height: 136px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            width: 100%;
+        }
+        @media (min-width: 1120px) {
+            gap: 10px 24px;
+        }
+        @media (min-width: 1336px) and (max-width: 1440px) {
+            gap: 10px 25px;
+        }  
+    }
+    &__wrapper::after {
+        @media (max-width: 320px) {
+            content: "";
+            width: 24px;
+            height: 81px;
+            top: 15px;
+            position: absolute;
+            left: 296px;
+            background-image: linear-gradient(
+              270deg,
+              #f8f8f8 16.84%,
+              rgba(248, 248, 248, 0.0001) 100%
+            );
+        }
+    }
+    &__slide {
+            @media (max-width: 767px) {
+             width: 240px;
+            }
+            @media (min-width: 767px) and (max-width: 1119px) {
+             max-width: 31.2%;
+            }
+            @media (min-width: 1120px) {
+             max-width: 23.3%;
+            }
+            @media (min-width: 1360px){
+             max-width: 23.1%;
+            }
+            @media (min-width: 1440px) {
+            max-width: 23.3%;
+            }
+    }
+}
+.swiper-slide {
+    &__button {
+        background-image: url(../img/icon/go.svg);
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        margin-right: 16px;    
+    }
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 72px;
+        background: $white;
+        border: 1px solid #eaeaea;
+        border-radius: 6px;
+        cursor: pointer;
+        transition-duration: 0.4s, 0.8s;
+        &:hover {
+          box-shadow: inset 0 0 0 2px #ff3e79;
+          transform: scale(0.9, 0.9);
+        }   
+    }
+    &__logo {
+        padding: 0 16px; 
+    }
+}
+.brand-slider .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #dddddd; 
+}
+.swiper-pagination__brand {
+    position: relative;
+    bottom: 20px;
+}
+.brand-button__image {
+    transform: translate(-30px, -5px); 
+}
+.expand:hover ~ .read-more::after {
+    color: $button-border-hover;
+}
+.expand:checked:hover ~ .read-more::after {
+    color: $button-border-hover; 
+}
+@media screen and (max-width:767px) {
+    .expand {
+        display: none;
+    }
+}
+@media screen and (min-width:767px) {
+    .expand {
+        opacity: 0;
+        position: relative;
+    }
+    .expand:checked ~ .swiper-wrapper {
+        max-height: none;
+    }
+    .read-more {
+        display: inline-block;
+        position: relative;
+        margin-top: 24px;
+        cursor: pointer;
+        @media (min-width: 768px) {
+           margin-bottom: 24px;
+        }
+        @media (min-width: 1120px) {
+           margin-bottom: 50px;
+        }  
+    }
+    .read-more::after {
+        content: "Показать все";
+        font-family: TT Lakes;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text-all;
+        padding-left: 26px;
+        background: url(../img/icon/expand.svg) no-repeat 0 -2px;
+        transition: all .4s ease-out;   
+    }
+    .expand:checked ~ .read-more::after {
+        content: "Скрыть";
+        font-family: "TT Lakes";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text-all;
+        background: url(../img/icon/expandUp.svg) no-repeat 0 -1px;  
+    }
+    .repair-brands__title {
+        padding: 16px 50px;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+}

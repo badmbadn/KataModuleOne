@@ -1,0 +1,221 @@
+.price {
+    max-width: 1440px;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $grey;
+    font-family: "TT Lakes";
+    &__title {
+        min-width: 320px;
+        height: auto;
+        background-color: $white;
+        background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
+        border-top: 1px solid $slider-devider;
+        padding: 16px 16px;
+        @media (min-width: 768px) {
+            padding: 16px 24px;
+          }
+        @media (min-width: 1120px) {
+            padding: 16px 0px;
+          }
+    }
+    &__detail {
+        max-width: 450px;
+        @media (max-width: 767px) {
+            padding: 0 16px;
+        }
+        @media (min-width: 768px) and (max-width: 1120px) {
+            padding: 0 24px;
+        }
+    }
+}
+.price-slider {
+    white-space: normal;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    padding: 0 16px;
+    @media screen and(min-width:768px) {
+        padding: 0;
+    }
+    &__wrapper {
+        color: $text-all;
+        line-height: 18px;
+        font-size: 14px;
+        padding-left: 0;
+        @media (min-width: 768px) {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 63px 0 0 0;
+            width: 100%;
+            height: 100%;
+            background: $white;
+            align-items: center;
+            border-radius: 6px;
+          }
+    }
+    &__slide {
+        display: block;
+        height: 200px;
+        width: 260px;
+        padding: 16px;
+        font-size: 14px;
+        line-height: 18px;
+        border-radius: 6px;
+        background-color: $white;
+        margin-right: 16px; 
+        @media (min-width: 768px) {
+            display: flex;
+            width: 100%;
+            height: 64px;
+            padding: 16px;
+            border-bottom: 1px solid $divider-price;
+            margin-right: 16px;
+            border-radius: 0;
+            background-color: transparent;
+          }
+    }
+    &__slide:first-child {
+        @media (min-width: 768px) {
+            border: none;
+        }
+    }
+    &__slide:last-child {
+        @media (min-width: 768px) {
+            border: none;
+        }
+    }
+    &__wrapper:first-child::after {
+        @media (max-width: 320px) {
+        content: "";
+        width: 25px;
+        height: 200px;
+        position: absolute;
+        left: 288px;
+        background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+        }
+    }
+    &__slide--upper {
+        margin-top: -65px;
+        position: absolute;
+        font-size: 14px;
+        line-height: 16px;
+        color: $text;
+        @media (max-width: 767px) {
+        display: none;
+        }
+    }
+}
+.price-service {
+    &__title {
+        font-size: 14px;
+        line-height: 16px;
+        color: $text;
+        margin-bottom: 4px;
+        @media (min-width: 768px) {
+        display: none;
+        }
+    }
+    &__options {
+        @media (min-width: 768px) {
+            padding: 0;
+            width: 55%;   
+        }
+    }
+    &__price {
+        @media (min-width: 768px) {
+            padding: 0;
+            width: 15%;
+           
+        }   
+    }
+    &__time {
+        @media (min-width: 768px) {
+            padding: 0;
+            width: 20%;
+        } 
+    }
+}
+
+.price-service__options,
+.price-service__price,
+.price-service__time,
+.price-service__title {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    vertical-align: center;
+    @media (min-width: 768px) {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+}
+.service-button {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: url(../img/icon/goside.svg) no-repeat 94%;
+    border-radius: 16px;
+    background-color: $button-border-hover;
+    color: $white;
+    border: 1px solid transparent;
+    padding: 4px 39px 4px 16px;
+    position: absolute;
+    right: 16px;
+    bottom: 18px;
+    transition: all .4s ease-out;  
+}
+.service-button:hover {
+    transition: all 0.3s linear;
+    background-color: $white;
+    color: $button-border-hover;
+    border: 1px solid $button-border-hover;  
+}
+.swiper-pagination__price {
+    transform: translateY(20px);
+    position: relative;
+    @media (min-width: 768px) {
+      display: none;
+    } 
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd; 
+}
+.detail-paragraph {
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color: $text-all; 
+}
+.detail-link {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding-right: 30px;
+    margin-top: 16px;
+    text-decoration: none;
+    color: $text-all;
+    transition-duration: 0.3s;
+    position: relative;
+    &:hover {
+      color: rgb(253, 94, 65);
+    } 
+}
+.detail-link::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: url(../img/icon/arrow.svg) no-repeat;
+    transform: translate(10px, 7px);  
+}

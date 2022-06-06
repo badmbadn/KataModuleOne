@@ -1,0 +1,195 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    &__content {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    &__main {
+        max-width: 1440px;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background:$grey ;
+        position: relative;
+        z-index: 5;
+    }
+}
+
+.main {
+    &__title-text::before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/icon/highlight.svg);
+        width: 3px;
+        height: 40px;
+        color: $highlighter;
+        margin-left: -15px;
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    &__title-text {
+        font-family: "TT Lakes";
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 700;
+        color:$text-all;
+        margin: 0;
+        padding-left: 16px;
+    }
+    &__menu-title {
+        display: none;
+    }
+    &__button-icon {
+        display: none;
+    }
+    &__title-text::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 40px;
+        left: 92%;
+        right: 0%;
+        top: 30%;
+        bottom: 64%;
+        background: linear-gradient(
+            270deg,
+            #f8f8f8 17%,
+            rgba(248,248,248, 0.0001) 100%
+        );
+    }
+
+
+}
+@media screen and (min-width:768px) {
+    .main {
+        padding: 0 24px;
+    }
+}
+@media screen and (min-width:1120px) {
+    .main {
+        &__title-text {
+            padding-left: 32px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1119px) {
+    .main {
+        &__title-text {
+            padding-left: 24px;
+        }
+        &__title-text::before {
+            margin-left: -24px;
+        }
+        &__title-text:after {
+            position: absolute;
+            left: 95%;
+            right: 2%;
+            top: 32%;
+            bottom: 55%;
+            background: linear-gradient(
+                270deg,
+                #f8f8f8 17%,
+                rgba(248,248,248, 0.0001) 100%
+            );
+        }
+        
+    }
+} 
+
+@media screen and (min-width:1366px) {
+    .container {
+        &__main {
+            margin-left: 320px;
+        }
+    }
+}
+
+@media screen and (max-width:1439px) {
+    .container {
+        &__main {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width:1120px) {
+    .main {
+        margin-top: 33px;
+        padding:  0 28px;
+        &__title-text::before {
+            margin-left: -32px;
+        }
+        &__menu-title {
+            display: block;
+            white-space: nowrap;
+        }
+        &__menu-title--repair {
+            margin-right: 80px;
+            font-family: "TT Lakes";
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $text-all;
+            font-weight: 500;
+            transition: all .5s linear;
+            &:hover {
+                color: $button-border-hover;
+                transform: scale(1.1,1.1);
+            }
+        }
+        &__menu-title--repair::after {
+            content: '';
+            position: absolute;
+            background-image: url(../img/icon/repair.svg);
+            width: 40px;
+            height: 40px;
+            margin-left: 8px;
+            transform: translateY(-10px);
+        }
+        &__menu-title--checkstatus {
+            margin-right: 81px;
+            font-family: "TT Lakes";
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $text-all;
+            font-weight: 500;
+            transition: all .4s linear;
+            &:hover {
+                color: $button-border-hover;
+                transform: scale(1.1,1.1);
+                transition: all .4s linear;
+            }
+        }
+        &__menu-title--checkstatus::after {
+            content: '';
+            position: absolute;
+            background-image: url(../img/icon/checkstatus.svg);
+            width: 40px;
+            height: 40px;
+            margin-left: 8px;
+            transform: translateY(-10px);
+            transition: all .5s linear;
+            &:hover {
+                transform: scale(1.1,1.1);
+               
+            }
+        }
+        &__menu {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        &__title {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
