@@ -12,7 +12,6 @@
       width: 320px;
       position: fixed;
       height: 100vh;
-      left: 0;
       top: 0;
       box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
       background: $white;
@@ -41,6 +40,7 @@
 .sidebar--show {
     display: block;
     z-index: 15;
+    right: 0;
 }
 .header-sidebar {
    display: flex;
@@ -209,7 +209,6 @@ footer {
 }
 .sidebar-fog--show {
   top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   display: block;
