@@ -5,7 +5,7 @@
     letter-spacing: -0.2px;
     color: $text-all;
     height: 100vh;
-  
+   
     @media (max-width: 1440px) {
       display: none;
       z-index: 100;
@@ -13,7 +13,7 @@
       position: fixed;
       height: 100vh;
       top: 0;
-
+     // box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
       background: $white;
       flex-direction: column;
       overflow-y: scroll;
